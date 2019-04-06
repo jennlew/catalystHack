@@ -1,12 +1,16 @@
 let x = 100;
 let y = 100;
+let bg;
 
 function setup() {
-createCanvas(1200, 600);
+createCanvas(1000, 661);
+bg = loadImage('assets/galaxy2.jpg');
 }
 
 function draw() {
-  background (200);
+  background (bg);
+  stroke(220);
+
   fill(60);
   ellipse(300, 300, 80, 80);
   fill(0, 0, 225);
