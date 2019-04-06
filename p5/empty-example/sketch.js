@@ -12,7 +12,7 @@ alienImg = loadImage('alien.jpg');
 frameRate(30);
 //pickLocation();
 }
-
+ 
 
 function draw() {
   background (225);
