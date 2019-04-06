@@ -1,12 +1,12 @@
 let x = 100;
 let y = 100;
 let bg;
+rect(x, y, 50, 50);
 
 
 function setup() {
-createCanvas(windowWidth, windowHeight);
+createCanvas(1260, 690);
 bg = loadImage('galaxy2.jpg');
-//alienImg = loadImage('../alien.jpg');
 alienImg = loadImage('alien.jpg');
 
 frameRate(30);
@@ -16,20 +16,22 @@ frameRate(30);
 
 function draw() {
   background (225);
+  image(bg, 0, 0);
   stroke(220);
 
-  fill(60);
-  ellipse(300, 300, 80, 80);
-  fill(0, 0, 225);
-  rect(x, y, 50, 50);
 
-  image(bg, 0, 0);
-  image(alienImg, 10, 10);
+  quad(28, 21, 56, 10, 39, 33, 20, 36);
+  quad(58, 51, 86, 40, 69, 63, 50, 66);
+  quad(128, 121, 156, 110, 139, 133, 120, 136);
+  quad(328, 321, 356, 310, 339, 333, 320, 336);
+  quad(528, 521, 556, 510, 539, 533, 520, 536);
+  quad(728, 721, 756, 710, 739, 733, 720, 736);
+  quad(28, 21, 56, 10, 39, 33, 20, 36);
+  image(alienImg, 10, 10, alienImg.height / 2, alienImg.width / 2);
 
   if (keyIsDown(LEFT_ARROW)) {
     x -= 5;
   }
-
   if (keyIsDown(RIGHT_ARROW)) {
     x += 5;
   }
@@ -41,24 +43,10 @@ function draw() {
   if (keyIsDown(DOWN_ARROW)) {
     y += 5;
   }
+}
 
-  fill(61);
-  ellipse(5, 5, 80, 80);
-  fill(62);
-  ellipse(100, 300, 80, 80);
-  fill(63);
-  ellipse(600, 500, 80, 80);
-  fill(64);
-  ellipse(500, 600, 80, 80);
-  fill(65);
-  ellipse(250, 100, 80, 80);
-  quad(28, 21, 56, 10, 39, 33, 20, 36);
-  quad(58, 51, 86, 40, 69, 63, 50, 66);
-  quad(128, 121, 156, 110, 139, 133, 120, 136);
-  quad(328, 321, 356, 310, 339, 333, 320, 336);
-  quad(28, 21, 56, 10, 39, 33, 20, 36);
-  quad(28, 21, 56, 10, 39, 33, 20, 36);
-  quad(28, 21, 56, 10, 39, 33, 20, 36);
+function keyPressed(){
+
 }
 
 function pickLocation() {
